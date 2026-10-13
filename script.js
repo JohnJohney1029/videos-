@@ -43,7 +43,21 @@ generateBtn.addEventListener("click", async () => {
           API key ko is file mein mat rakhna.
         */
 
-        const response = await fetch("/api/generate", {
+      const response = await fetch(
+  "YOUR_BACKEND_URL/api/generate",
+  {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+      prompt,
+      style,
+      format,
+      duration: 25
+    })
+  }
+);
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
