@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>LittleDreams AI — Kids Video Generator</title>
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="navbar">
+    <div class="logo">✨ LittleDreams</div>
+    <div class="duration">🎬 20–30 sec videos</div>
+</header>
+
+<main>
+    <section class="hero">
+        <div class="badge">✦ AI STORY MAGIC</div>
+
+        <h1>Big imagination.<br>
+        <span>Little adventures.</span></h1>
+
+        <p>
+            Create magical stories for kids. Just describe your idea
+            and turn it into a fun little video.
+        </p>
+    </section>
+
+    <section class="generator">
+
+        <label for="prompt">Describe your video</label>
+
+        <textarea
+            id="prompt"
+            placeholder="A cute little dinosaur explores a magical forest and makes new animal friends..."
+        ></textarea>
+
+        <div class="options">
+            <div>
+                <label for="style">Animation style</label>
+                <select id="style">
+                    <option>Colorful 3D Cartoon</option>
+                    <option>Storybook Animation</option>
+                    <option>Clay Animation</option>
+                    <option>Watercolor</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="format">Video format</label>
+                <select id="format">
+                    <option value="16:9">YouTube Landscape</option>
+                    <option value="9:16">YouTube Shorts</option>
+                    <option value="1:1">Square Video</option>
+                </select>
+            </div>
+        </div>
+
+        <button id="generateBtn">
+            ✨ Generate Kids Video →
+        </button>
+
+        <p class="note">
+            No login required · Child-friendly story ideas
+        </p>
+    </section>
+
+    <section id="result" class="result" hidden>
+        <h2>Your video</h2>
+
+        <div id="status">Preparing your idea...</div>
+
+        <video id="video" controls playsinline hidden></video>
+
+        <p id="message"></p>
+    </section>
+</main>
+
+<footer>
+    Made with ✨ for little imaginations
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
